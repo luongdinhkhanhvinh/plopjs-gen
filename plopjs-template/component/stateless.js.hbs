@@ -1,0 +1,28 @@
+import React, { PropTypes } from 'react';
+{{#if connectedComponent}}
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+{{/if}}
+
+const {{ properCase name }} = () => {
+  return (
+    <div>
+    </div>
+  );
+}
+
+{{ properCase name }}.propTypes = {
+};
+
+{{#if connectedComponent}}
+const mapState = (state) => ({
+});
+
+const mapDispatch = (dispatch) => ({
+  // actions: bindActionCreators(yourActions, dispatch)
+});
+
+export default connect(mapState, mapDispatch)({{ properCase name }});
+{{else}}
+export default {{ properCase name }};
+{{/if}}
